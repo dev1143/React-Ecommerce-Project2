@@ -9,16 +9,16 @@ export default function Footer() {
         padding: "5%",
         backgroundColor:'black',
         color:'white',
-        marginTop:'10px'
+        marginTop:'10px',
+        
     }
     const style1={
-        listStyleType:"none"
+        listStyleType:"none",
+        textAlign:'left'
     }
     return (
         <div style={style}>
             <Row>
-                
-            
                 
                 <Col lg={3} md={3} xs={12}>
             <ul  style={style1}>
