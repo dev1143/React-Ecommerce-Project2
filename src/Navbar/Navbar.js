@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import {Navbar,Nav} from "react-bootstrap";
+import {Navbar,Nav, Container} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import {useSelector,useDispatch} from "react-redux";
 import {useHistory} from "react-router-dom";
@@ -36,6 +36,7 @@ export default function Navbar1() {
 
     return (
         <div>
+          
         <Navbar bg="dark" variant="dark" expand="lg">
 
         <Navbar.Brand href="#home"><Link to="/">React-Bootstrap</Link></Navbar.Brand>
@@ -61,6 +62,7 @@ export default function Navbar1() {
         </Nav>
         </Navbar.Collapse>
         </Navbar>
+        
         </div>
     )
 }
