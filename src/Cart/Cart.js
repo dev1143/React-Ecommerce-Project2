@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react'
 import {useSelector} from "react-redux"
 import CartItem from "./CartItem";
 import {useHistory} from "react-router-dom";
-import {Container,Button} from "react-bootstrap";
+import {Container,Button,Row,Col} from "react-bootstrap";
 import styles from "./Cart.module.css";
 
 
@@ -41,18 +41,24 @@ export default function Cart() {
         }      
         
     return (
-        <div className={styles.cart}>
+        <div >
             <Container>
-            
+            <Row>
+                   
             {/* <h1>this is Cart Component</h1> */}
             <div className={styles.cart__items}>
             {   
+                
                 cart.map((item)=>(
+                    
                    <CartItem key={item.id} item={item}/>
+                   
                 ))
+                
             }
             </div>
-            <div className={styles.cart__summary}>
+            <Col lg={12} md={12} xs={12}>
+            <div className={styles.cart_real_div}>
             
             <h4 className={styles.summary__title}>Cart Summary</h4>
             <div className={styles.summary__price}>
@@ -61,6 +67,8 @@ export default function Cart() {
             </div>
             <Button variant="outline-secondary" onClick={switchHandler}>Proceed To Checkout</Button>
             </div> 
+            </Col>
+            </Row>
             </Container>
         </div>
     )

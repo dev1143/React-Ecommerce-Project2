@@ -3,7 +3,7 @@ import {Button} from "react-bootstrap";
 import {removeFromCart} from "../Shopping/ShoppingAction";
 import {adjustquantity} from "../Shopping/ShoppingAction";
 import {useDispatch} from "react-redux";
-// import {Row,Col} from "react-bootstrap";
+import {Row,Col} from "react-bootstrap";
 import styles from "./CartItem.module.css";
 
 export default function CartItem({item}) {
@@ -20,30 +20,38 @@ export default function CartItem({item}) {
              dispatch(removeFromCart(itemId))
          }
 
-         const style1={
-            height:'100px',
-            width:'100px'
-         }
-
     return (
-        <div class={styles.cartItem}>
-                    
-                    <img  alt="cannot render" className={styles.cartItem__image} src={item.image} />     
-                    <div className={styles.cartItem__details}>
+        <Row>
+        <div className={styles.actual_item}>
+                    <Row>
+                    <Col lg={6} md={6} xs={12}>
+                    <img  alt="cannot render" className={styles.cartItem__image} src={item.image} />  
+                       
+                    <div>
                     <p className={styles.details__title}>{item.title}</p>
                     <p className={styles.details__price}>
                     <b>PRICE : RS</b> {item.price}
                     </p>
+                    
                     </div>
-                    <div className={styles.cartItem__actions}>
-                        <div className={styles.cartItem__qty}>
-                        <label htmlFor="qty">Qty</label>
-                    <input min="1" type="number" id="qty" name="qty" value={input} onChange={onChangeHandler}/>
-                        </div>
+                    </Col>
+                    
+                    <Col lg={6} md={6} xs={12}>
+                    <div className={styles.quantity_item}>   
+                   
+                    
+                    <label htmlFor="qty">Qty</label>
+                    <input min="1" className={styles.cartItem__qty} type="number" id="qty" name="qty" value={input} onChange={onChangeHandler}/>
+                    
+                    <Button className={styles.button_item} onClick={()=>handler(item.id)} variant="primary">DELETE</Button>
+                    
+                    
                     </div>
-                    <Button style={style1} onClick={()=>handler(item.id)} variant="primary">DELETE</Button>
-                        
+                    </Col>
+                    
+                    </Row>       
                     
         </div>
+        </Row>
     )
 }

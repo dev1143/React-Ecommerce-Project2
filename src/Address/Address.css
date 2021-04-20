@@ -3,12 +3,14 @@
     width:260px !important;
 }
 .address-form{
-    width:400px;
+    width:300px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     align-items: center;   
 }
 .card-section{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    align-items: center;
+    margin:0px -17px;
 }
 .actual-form{
     padding: 20px;

@@ -45,12 +45,12 @@ export default function Address() {
               <Col lg={3} md={3} xs={12} style={{margin:"30px"}}>
                 <Card className="card-section" key={id} style={{ width: '18rem' }}>
                 <Card.Body>
-                  <Card.Title><p>First Name :{value.firstName}</p></Card.Title>
-                  <Card.Title><p>Last Name :{value.lastName}</p></Card.Title>
-                  <Card.Title><p>Address 1 :{value.address1}</p></Card.Title>
-                  <Card.Title><p>Address 2 :{value.address2}</p></Card.Title>
-                  <Card.Title><p>Zip :{value.zip}</p></Card.Title>
-                  <Card.Title><p>City :{value.city}</p></Card.Title>
+                  <Card.Title><p><b>First Name :</b>{value.firstName}</p></Card.Title>
+                  <Card.Title><p><b>Last Name :</b>{value.lastName}</p></Card.Title>
+                  <Card.Title><p><b>Address 1 :</b>{value.address1}</p></Card.Title>
+                  <Card.Title><p><b>Address 2 :</b>{value.address2}</p></Card.Title>
+                  <Card.Title><p><b>Zip :</b>{value.zip}</p></Card.Title>
+                  <Card.Title><p><b>City :</b>{value.city}</p></Card.Title>
                   <Button onClick={removeHandler} variant="primary">Select Address</Button>
                 </Card.Body>
               </Card>
